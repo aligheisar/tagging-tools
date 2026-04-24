@@ -53,7 +53,7 @@ def get_title(audio, file_path):
 
 def sanitize_filename(filename):
     # Replace invalid characters with an underscore
-    return re.sub(r'[<>:"/\\|?*]', '_', filename)
+    return re.sub(r'[<>:"/\\|?*]', '', filename).strip() 
 
 def rename_music_file(file_path):
     try:
